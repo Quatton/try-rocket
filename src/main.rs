@@ -1,9 +1,9 @@
 #[macro_use]
 extern crate rocket;
 
-#[get("/<name>/<age>")]
-fn hello(name: &str, age: u8) -> String {
-    format!("Hello, {} year old named {}!", age, name)
+#[get("/<name>")]
+fn hello(name: &str) -> String {
+    format!("Hello, {}!", name)
 }
 
 #[launch]
